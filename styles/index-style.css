@@ -20,6 +20,8 @@ html {
 /* menu */
 .menu {
   position: relative;
+  max-height: 100vh;
+  overflow:hidden;
 }
 .section-title {
   font-size: 100px;
