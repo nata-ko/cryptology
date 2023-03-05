@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input,
+textarea,
+button {
+  outline: none;
+}
+html {
+  background: #1d1821;
+  color: aliceblue;
+  font-family: "Rubik", sans-serif;
+}
+
+/* menu */
+.menu {
+  position: relative;
+}
+.section-title {
+  font-size: 100px;
+  text-align: center;
+  padding: 5% 0;
+}
+.menu .title-line {
+  content: "";
+  background: black;
+}
+.menu .menu__options {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 4% auto;
+}
+.menu .menu__options .card {
+  opacity: 0.7;
+  padding: 5%;
+  width: 30%;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.menu .menu__options .card:hover {
+  opacity: 1;
+  transform: scale(120%);
+}
+.menu .menu__options .card .card__title {
+  font-size: 30px;
+  text-align: center;
+}
+.menu .menu__options .card .types {
+  background: transparent;
+  padding-top: 9%;
+}
+.menu .menu__options .purple-card {
+  background: radial-gradient(
+    337px at 0% 2.1%,
+    rgb(0, 226, 192) 0.3%,
+    rgb(149, 0, 248) 100%
+  );
+}
+.menu .menu__options .red-card {
+  background: radial-gradient(337px at 0% 2.1%, #8e44ad 0.3%, #ee2252 100%);
+}
+.menu .menu__options .green-card {
+  padding-left: 2%;
+  padding-right: 2%;
+  background: radial-gradient(337px at 0% 2.1%, #007991 0.3%, #3aeab5 100%);
+}
+.menu .menu__options .card .types .types-option,
+.about-me__content {
+  font-size: 20px;
+  padding: 5% 0;
+  margin-top: 7%;
+  text-align: center;
+}
+.about-me__content {
+  line-height: 30px;
+}
+.menu .menu__options .card .types .types-option {
+  border: 1px solid aliceblue;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+/* encrypt */
+.encrypt-section,
+.decrypt-section {
+  position: relative;
+}
+.encrypt-section .encrypt-section__content,
+.decrypt-section .decrypt-section__content {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 5% auto;
+}
+
+.encrypt-section .encrypt-section__content .input-place,
+.encrypt-section .encrypt-section__content .output-place,
+.decrypt-section .decrypt-section__content .input-place,
+.decrypt-section .decrypt-section__content .output-place {
+  width: 40%;
+}
+.encrypt-section .encrypt-section__content .input-place textarea,
+.encrypt-section .encrypt-section__content .output-place textarea,
+.decrypt-section .decrypt-section__content .input-place textarea,
+.decrypt-section .decrypt-section__content .output-place textarea {
+  padding: 1.5%;
+  width: 100%;
+  font-size: 20px;
+}
+.encrypt-section .encrypt-section__content .key-section .key-title,
+.decrypt-section .decrypt-section__content .key-section .key-title {
+  font-size: 30px;
+  position: absolute;
+  top: -20%;
+  left: 35%;
+}
+.encrypt-section .encrypt-section__content .key-section,
+.decrypt-section .decrypt-section__content .key-section {
+  margin: 3% 2%;
+  position: relative;
+}
+.encrypt-section .encrypt-section__content .key-section input,
+.decrypt-section .decrypt-section__content .key-section input {
+  font-size: 20px;
+  padding: 2% 1%;
+  border-radius: 10px;
+}
+.encrypt-section .encrypt-section__content .key-section .button,
+.decrypt-section .decrypt-section__content .key-section .button {
+  padding: 4%;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+.encrypt-section .encrypt-section__content .key-section .button {
+  background: radial-gradient(
+    337px at 0% 2.1%,
+    rgb(0, 226, 192) 0.3%,
+    rgb(149, 0, 248) 100%
+  );
+}
+/* decrypt */
+.decrypt-section .decrypt-section__content .key-section .button {
+  background: radial-gradient(337px at 0% 2.1%, #8e44ad 0.3%, #ee2252 100%);
+}
+
+/* about me */
+.about-me__content {
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.4s linear;
+}
+.green-card:hover .about-me__content {
+  opacity: 1;
+  transform: scale(100%);
+}
+/* additional popups */
+._hidden {
+  display: none;
+}
+.file-saved {
+  position: absolute;
+  top: 140%;
+  left: 28%;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid black;
+  padding: 2%;
+  color: #007991;
+}
+.file-saved #closeX {
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-align: right;
+}
+.file-saved .title {
+  font-size: 35px;
+  text-align: center;
+}
+.okay-container {
+  margin-top: 2.5%;
+  display: flex;
+  width: 100%;
+  justify-items: center;
+}
+.okay {
+  padding: 1.2% 4%;
+  font-size: 20px;
+  border: none;
+  margin: 0 auto;
+  background: #007991;
+  color: white;
+}
+.okay:hover {
+  cursor: pointer;
+}
+
+/* save file name */
+.create-file-name-popup {
+  z-index: 2;
+  padding-bottom: 0.1%;
+  padding-right: 0.3%;
+  transform: translateY(-180%);
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  background: WHITE;
+  color: #1d1821;
+  text-align: center;
+}
+
+.create-file-name-popup .close-popup {
+  text-align: right;
+  transition: all 0.2s;
+}
+.create-file-name-popup .close-popup:hover {
+  color: #ee2252;
+  cursor: pointer;
+}
+
+.create-file-name-popup .title {
+  font-size: 30px;
+  text-align: center;
+}
+.create-file-name-popup input {
+  margin-top: 1.2%;
+  font-size: 20px;
+  padding: 1.2%;
+}
+.create-file-name-popup .ok {
+  font-size: 20px;
+  padding: 1.2%;
+  border: 1px solid black;
+  width: 15%;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin: 2% auto;
+  transition: color 0.6s, background 0.6s, transform 1s, border 0.5s;
+}
+.create-file-name-popup .ok:hover {
+  border: none;
+  color: white;
+  background: radial-gradient(337px at 0% 2.1%, #007991 0.3%, #3aeab5 100%);
+  transform: scale(120%);
+  cursor: pointer;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bratchykova Ciphers</title>
+    <link rel="stylesheet" href="styles/index-style.css" />
+  </head>
+  <body>
+    <!-- menu -->
+    <section class="menu">
+      <h2 class="section-title">Menu</h2>
+      <div class="title-line"></div>
+      <div class="menu__options">
+        <div class="card purple-card encrypt-card">
+          <div class="card__title">Encrypt</div>
+          <div class="encrypt-types types">
+            <div
+              class="encrypt-types__caesar types-option button"
+              id="caesar-cipher"
+            >
+              Caesar
+            </div>
+            <div
+              class="encrypt-types__tretemius types-option button"
+              id="tretemius-cipher"
+            >
+              Trithemius
+            </div>
+          </div>
+        </div>
+        <div class="card red-card">
+          <div class="card__title">Decrypt</div>
+          <div class="decrypt-types types">
+            <div
+              class="decrypt-types__caesar types-option button"
+              id="caesar-decrypt"
+            >
+              Caesar
+            </div>
+            <div
+              class="decrypt-types__tretemius types-option button"
+              id="tretemius-decrypt"
+            >
+              Trithemius
+            </div>
+          </div>
+        </div>
+        <div class="card green-card">
+          <div class="card__title">About me</div>
+          <div class="about-me__content">
+            First name:Nataliia <br />
+            Last name: Bratchykova <br />
+            Group:TR-11 <br />
+          </div>
+        </div>
+      </div>
+      <!-- menu decoration -->
+      <div class="purple-circle"></div>
+    </section>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+    <!-- encrypt -->
+    <section class="encrypt-section"></section>
+    <section class="decrypt-section"></section>
+
+    <!-- popups -->
+
+    <!-- give name to your file -->
+    <div class="create-file-name-popup _hidden">
+      <div class="close-popup">X</div>
+      <div class="title">File name:</div>
+      <input type="text" placeholder="file name ..." id="file-name-input" />
+      <div class="ok" id="save-name">Ok</div>
+    </div>
+
+    <!-- file saved -->
+    <div class="file-saved _hidden">
+      <div id="closeX">X</div>
+      <div class="title">
+        File <span id="fileName">${name}</span>.txt is successfully saved!☑️
+      </div>
+      <div class="okay-container">
+        <button id="okay" class="okay">OKAY</button>
+      </div>
+    </div>
+    <!-- scripts -->
+    <script type="module" src="scripts/main-script.js"></script>
+  </body>
+</html>
